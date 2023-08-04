@@ -8,8 +8,6 @@ export default (async (req, res) => {
             scopes: ['openid']
         });
 
-        console.log(accessToken)
-
         const response = await axios.post(api('buy-tokens'), {},
             {
                 headers: {
@@ -18,11 +16,9 @@ export default (async (req, res) => {
             }).then((res) => {
                 return res
             }).catch((err) => {
-                console.log('err', err);
+                console.log(err);
                 return err
             });
-
-        console.log(response)
 
         res.status(response.status || 200).json(response.data);
     } catch (errorWrapped) {

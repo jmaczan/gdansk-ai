@@ -42,7 +42,6 @@ app.use(
 
 // AI-API proxy
 app.post('/question', authorize, async (req, res, next) => {
-    console.log('/question');
     let user: User = undefined;
 
     try {
@@ -52,10 +51,8 @@ app.post('/question', authorize, async (req, res, next) => {
                     id: req.auth.payload.sub,
                 })
             .then(response => {
-                console.log("User data", response)
                 user = response;
 
-                // TODO check if user has enough tokens to perform a question
                 if (user.user_metadata?.tokens > 0) { // TODO use customizable value here 
                     try {
                         managementAPI
@@ -113,7 +110,6 @@ export const api = (endpoint: string = '') => `${prefix}${endpoint}`;
 
 app.post('/webhook', async (req, res) => {
     const { type, data } = req.body;
-    console.log('webhook ', type)
     if (type === 'checkout.session.completed') {
         const sessionId = data.object.id;
         const session = await stripe.checkout.sessions.retrieve(sessionId);
@@ -123,7 +119,6 @@ app.post('/webhook', async (req, res) => {
             payment_status: session.payment_status,
             session_status: session.status
         };
-        console.log(session_completed);
 
         let users = await managementAPI
             .getUsersByEmail(session_completed.email);
@@ -136,7 +131,6 @@ app.post('/webhook', async (req, res) => {
                             id: users[0].user_id,
                         })
                     .then(response => {
-                        console.log("User data", response)
                         const user = response;
 
                         try {
@@ -176,7 +170,6 @@ app.post('/webhook', async (req, res) => {
 });
 
 app.get("/my-tokens", authorize, async (req, res) => {
-    console.log('/my-tokens');
     let user: User = undefined;
 
     try {
@@ -186,7 +179,6 @@ app.get("/my-tokens", authorize, async (req, res) => {
                     id: req.auth.payload.sub,
                 })
             .then(response => {
-                console.log("User data", response)
                 user = response;
                 res.status(200).json({ 'tokens': user.user_metadata.tokens });
             })
@@ -199,7 +191,6 @@ app.get("/my-tokens", authorize, async (req, res) => {
 });
 
 app.post('/buy-tokens', authorize, async (req, res) => {
-    console.log('/buy-tokens');
     let user: User = undefined;
 
     try {
@@ -209,7 +200,6 @@ app.post('/buy-tokens', authorize, async (req, res) => {
                     id: req.auth.payload.sub,
                 })
             .then(response => {
-                console.log("User data", response)
                 user = response;
             })
             .catch(function (err) {

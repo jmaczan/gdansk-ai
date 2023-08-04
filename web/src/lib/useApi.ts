@@ -20,7 +20,6 @@ export const usePost = (
     response: any;
 } => {
     const [state, setState] = React.useState(() => initialState({}));
-    console.log('usePost.data', data)
     React.useEffect(() => {
         const fetchData = async () => {
             try {

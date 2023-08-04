@@ -135,7 +135,6 @@ const Page = ({ bibsAmount, setBibsAmount, audioChunksRef, setUnwantedTopics, se
 
   const buyIntent = async () => {
     const res = await axios.post('/api/buy-tokens');
-    console.log(res?.data?.redirectUrl);
     if (res?.data?.redirectUrl) {
       document.location.assign(res.data.redirectUrl);
     }

@@ -19,7 +19,6 @@ export const findCurrentRoute = (routes: any): any => {
 
 export const getActiveRoute = (routes: any): any => {
   const route = findCurrentRoute(routes);
-  console.log(route);
   return route?.name || defaultRouteName;
 };
 
