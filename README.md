@@ -1,4 +1,4 @@
-# `🦭 Gdańsk AI`
+# `🦭 Gdańsk AI 🦭`
 Gdańsk AI is a full stack AI voice chatbot (speech-to-text, LLM, text-to-speech) with integrations to Auth0, OpenAI, Google Cloud API and Stripe - Web App, API and AI
 
 ## Web API
