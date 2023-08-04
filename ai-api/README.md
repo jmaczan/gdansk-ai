@@ -1,50 +1,20 @@
-`pip-compile pyproject.toml`
-`pip install -r requirements.txt`
+# `Gdańsk AI` - AI API
+
+### Troubleshooting
+
+In case of problems with dependencies:
+
+1. `pip-compile pyproject.toml`
+2. `pip install -r requirements.txt`
+
 optionally on pip-tools error:
-`python -m pip uninstall pip-tools`
-`pip install pip-tools`
-repeat
 
-# FastAPI on Vercel Example
+4. `python -m pip uninstall pip-tools`
+5. `pip install pip-tools`
+6. repeat
 
-This is a [FastAPI](https://fastapi.tiangolo.com/) example app deployed on [Vercel](https://vercel.com/).
-Read more about using Python at Vercel [here](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python#)
+## License
+GNU GPL v2 
 
-![imagen](https://github.com/marcorichetta/fastapi-vercel/assets/19599150/7a48c145-9aa5-4225-a068-4cececcb6dae)
-
-### Requirements
-
--   Vercel account
--   Python 3.9 [Supported version at Vercel](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python#python-version)
--   Vercel CLI (Optional)
-
-### Setup
-
-1. `git clone && cd fastapi-vercel`
-1. _(Recommended)_ Create a virtual environment and activate it
-
-```bash
-python -m venv env
-
-source env/bin/activate
-```
-
-1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-1. Run it!
-
-```bash
-uvicorn main:app --reload
-```
-
-1. Deploy to Vercel
-
-```bash
-vercel
-# or
-git push # on main
-```
+## Author
+Made in [Poland](https://en.wikipedia.org/wiki/Poland) in 2023 by [Jędrzej Paweł Maczan](https://maczan.pl)
