@@ -1,0 +1,1 @@
+export const imageUrl = (codeName: string) => `${process.env.NEXT_PUBLIC_IMAGES_URL}${codeName}.png`;
