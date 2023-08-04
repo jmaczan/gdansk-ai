@@ -7,12 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node dist/app.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "typeorm": "ts-node ./node_modules/typeorm/cli",
-    "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./src/data-source.ts",
-    "typeorm:generate-migration": "npm run typeorm -- -d ./src/data-source.ts migration:generate ./src/migrations/$NAME",
-    "typeorm:create-migration": "npm run typeorm -- migration:create ./src/migrations/$NAME",
-    "typeorm:revert-migration": "npm run typeorm -- -d ./src/data-source.ts migration:revert"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
   "devDependencies": {
     "@types/express-session": "^1.17.6",
