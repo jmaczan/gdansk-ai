@@ -8,21 +8,21 @@ It uses [Stripe](https://stripe.com/) to provide payments infrastructure, so use
 
 If you want to use these services, you have to set up your Stripe and Auth0 accounts and put API keys into `.env` in `web-api/` directory.
 
-`env_example` shows which values you have to set
+`.env_example` shows which values you have to set
 
 Node.js, TypeScript and Express are used here
 
 ## Web
 It works in Google Chrome currently. You can press Gdańsk AI logo to record audio, then press it once again to send it to Web API. After a successful response, a received audio is played to you.
 
-`env_example` shows which values you have to set
+`.env_example` shows which values you have to set
 
 Next.js used here
 
 ## AI API
 OpenAI and Google Cloud API are used here to provide speech-to-text (Whisper-1), LLM (gpt-3.5-turbo) and text-to-speech (Google Cloud TextToSpeechClient) services.
 
-`env_example` shows which values you have to set
+`.env_example` shows which values you have to set
 
 Python and FastAPI here
 
@@ -30,4 +30,4 @@ Python and FastAPI here
 GNU GPL v2 
 
 ## Author
-Made in [Poland](https://en.wikipedia.org/wiki/Poland) in 2023 by [Jędrzej Paweł Maczan](https://maczan.pl)
+Made in [Gdańsk](https://en.wikipedia.org/wiki/Gda%C5%84sk), [Poland](https://en.wikipedia.org/wiki/Poland) in 2023 by [Jędrzej Paweł Maczan](https://maczan.pl)
