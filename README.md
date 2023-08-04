@@ -17,7 +17,7 @@ It works in Google Chrome currently. You can press Gdańsk AI logo to record aud
 
 `.env_example` shows which values you have to set
 
-Next.js used here
+Next.js used here with Vercel's [template](https://vercel.com/templates/next.js/nextjs-boilerplate)
 
 ## AI API
 OpenAI and Google Cloud API are used here to provide speech-to-text (Whisper-1), LLM (gpt-3.5-turbo) and text-to-speech (Google Cloud TextToSpeechClient) services.
