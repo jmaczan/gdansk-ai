@@ -1,4 +1,4 @@
-# `Gdańsk AI` - Web App
+# `🦭 Gdańsk AI` - Web App
 
 ## License
 GNU GPL v2 

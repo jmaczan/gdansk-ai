@@ -1,4 +1,6 @@
-# `Gdańsk AI` - AI API
+# `🦭 Gdańsk AI` - AI API 
+
+## Set up
 
 ### Troubleshooting
 
