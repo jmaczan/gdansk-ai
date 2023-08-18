@@ -120,8 +120,35 @@ PORT=9000
 
 Create an account, then a new tenant. You will need to set up:
 
-- Applications: - Applications -> API Explorer Application (Machine to Machine) - Regular Web Application
-  APIs: - Auth0 Management API (System API)
+- Applications
+
+  - API Explorer Application (Machine to Machine)
+    - Client secret taken from here
+    - Allow Cross-Origin Authentication
+    - Credentials - Authentication Methods - Client Secret (Post)
+    - APIs - Auth0 Management API - Authorized and all permissions should be granted in dropdown to the right
+  - Regular Web Application
+    - Client secret here
+    - Allowed Callback URLs: http://localhost:8080, http://localhost:8080/callback, http://localhost:8080/api/auth/callback or replace localhost:8080 with your domain and make sure you use correct protocol http/https
+    - Allowed Logout URLs: http://localhost:8080 or your domain
+    - Allowed Web Origins: http://localhost:8080, your API and AI API domain or your domain
+    - Allow Cross-Origin Authentication: Allowed Cors should be web url, your Web API and AI API domain
+    - Rotation ON
+    - Credentials - Authentication Methods - Client Secret (Post)
+
+- APIs
+  - Auth0 Management API (System API):
+    - Machine To Machine Applications:
+      - add both applications listed above and make sure the switch Authorized to the right is turned on for both
+      - add all permissions for both of them, by clicking on dropdown to the right and selecting All permissions and saving
+
+## Stripe setup
+
+Create an account
+
+## OpenAI setup
+
+Create an account, go to platform.openai.com, generate API key, use it in .env files
 
 ## License
 
