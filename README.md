@@ -20,7 +20,6 @@ Node.js, TypeScript and Express are used here
 CHATBOT_API_KEY={whatever you decide; this value is reused among ai-api, web-api and web in this project}
 OPEN_AI_API_KEY={go to platform.openai.com, generate and copy-paste api key here}
 # Google Cloud API
-GOOGLE_API_KEY=
 type=service_account
 project_id={project id}
 private_key_id=
@@ -41,8 +40,6 @@ TOKENS_PRICE_ID={price_some characters here - you need to create a price in Stri
 TOKENS_PER_TRANSACTION=5
 
 # Auth0
-AUTH0_SECRET=
-AUTH0_BASE_URL={url pointing to where web is deployed}
 AUTH0_ISSUER_BASE_URL='https://{tenant-name}.us.auth0.com'
 AUTH0_DOMAIN='{tenant-name}.us.auth0.com'
 AUTH0_CLIENT_ID=
@@ -50,8 +47,6 @@ AUTH0_CLIENT_SECRET=
 AUTH0_AUDIENCE="https://{tenant-name}.us.auth0.com/api/v2/"
 AUTH0_SCOPE="openid profile email offline_access"
 CLIENT_URL={url pointing to where web is deployed}
-SESSION_SECRET="set_secret_value_here"
-BASE_URL={url pointing to where web api is deployed}
 AI_API_URL={url pointing to where ai api is deployed}
 ```
 
@@ -79,8 +74,6 @@ CHATBOT_API_URL={url to where api is deployed}
 
 NEXT_PUBLIC_API_URL={url pointing to where api is deployed}
 API_URL={url to where api is deployed}
-SESSION_SECRET="set_secret_value_here"
-NEXT_PUBLIC_SELF_URL={url pointing to where web is deployed}
 
 # Auth0
 NEXT_PUBLIC_AUTH0_ISSUER_BASE_URL="https://{tenant-name}.us.auth0.com"
@@ -123,7 +116,6 @@ Python and FastAPI here
 CHATBOT_API_KEY={whatever you decide; this value is reused among ai-api, web-api and web in this project}
 OPEN_AI_API_KEY={go to platform.openai.com, generate and copy-paste api key here}
 # Google Cloud API start
-GOOGLE_API_KEY=
 type=service_account
 project_id={project id}
 private_key_id=
@@ -176,6 +168,8 @@ Create an account, turn the test mode unless you want to run it on production an
 ## OpenAI setup
 
 Create an account, go to platform.openai.com, generate API key, use it in .env files
+
+## Google Cloud API setup
 
 ## Acknowledgements
 
