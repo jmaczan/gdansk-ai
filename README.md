@@ -148,9 +148,9 @@ Create an account, then a new tenant. You will need to set up:
     - APIs - Auth0 Management API - Authorized and all permissions should be granted in dropdown to the right
   - Regular Web Application
     - Client secret here
-    - Allowed Callback URLs: http://localhost:8080, http://localhost:8080/callback, http://localhost:8080/api/auth/callback or replace localhost:8080 with your domain and make sure you use correct protocol http/https
-    - Allowed Logout URLs: http://localhost:8080 or your domain
-    - Allowed Web Origins: http://localhost:8080, your API and AI API domain or your domain
+    - Allowed Callback URLs: 6 URLs in total in format: url, url/callback, url/api/auth/callback - one url is web api url and another one is for web url (example: http://localhost:8080, http://localhost:8080/callback, http://localhost:8080/api/auth/callback, http://localhost:3000, http://localhost:3000/callback, http://localhost:3000/api/auth/callback; replace localhost and port with with your domain and make sure you use correct protocol http/https)
+    - Allowed Logout URLs: URL of web api and web app - http://localhost:3000 and http://localhost:8080 or your domain
+    - Allowed Web Origins: URL of web api and web app - http://localhost:8080, your API and AI API domain or your domain
     - Allow Cross-Origin Authentication: Allowed Cors should be web url, your Web API and AI API domain
     - Rotation ON
     - Credentials - Authentication Methods - Client Secret (Post)
@@ -170,6 +170,8 @@ Create an account, turn the test mode unless you want to run it on production an
 Create an account, go to platform.openai.com, generate API key, use it in .env files
 
 ## Google Cloud API setup
+
+Create an account, go to IAM & Admin, then Service Accounts and create a project - you need id of the project to put into .env files. Then you need to generate json with credentials and extract the values from the file to your .env files. Go to Create access credentials page (you can use search engine to find a link). Then Keys -> Add Key -> Create new key -> JSON -> Create. You should get credentials.json with all values you need to .env. Finally, you need to enable text to speech API service and you're ready
 
 ## Acknowledgements
 
