@@ -175,6 +175,10 @@ Create an account
 
 Create an account, go to platform.openai.com, generate API key, use it in .env files
 
+## Acknowledgements
+
+Thanks to [Jeff McJunkin](https://github.com/jeffmcjunkin) for improving the README by going through the config process from the scratch and filling the gaps in the docs
+
 ## License
 
 GNU GPL v2
