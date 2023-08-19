@@ -54,6 +54,13 @@ BASE_URL={url pointing to where web api is deployed}
 AI_API_URL={url pointing to where ai api is deployed}
 ```
 
+### Run
+
+- go to `web-api` directory
+- `npm install` or `npm ci`
+- `npm run build`
+- `npm run start` or `npm run dev` to run it with hot-reload
+
 ## Web
 
 It works in Google Chrome currently. You can press Gdańsk AI logo to record audio, then press it once again to send it to Web API. After a successful response, a received audio is played to you.
@@ -87,6 +94,19 @@ AUTH0_SCOPE="openid profile email offline_access"
 CLIENT_URL={url pointing to where web is deployed}
 ```
 
+### Run
+
+- go to `web` directory
+- `npm install` or `npm ci`
+- `npm run build`
+- install Stripe cli
+- `stripe listen --forward-to http://localhost:3000/webhook` (adjust the port from 3000 if you've changed it) - we need this to invoke `/webhook` endpoint on bibs purchases
+- `npm run start`
+
+### Troubleshooting
+
+- you might neet to remove/comment out `screen_hint: "signup",` in `signup.ts`
+
 ## AI API
 
 OpenAI and Google Cloud API are used here to provide speech-to-text (Whisper-1), LLM (gpt-3.5-turbo) and text-to-speech (Google Cloud TextToSpeechClient) services.
@@ -115,6 +135,11 @@ client_x509_cert_url=https://www.googleapis.com/robot/v1/metadata/x509/{project-
 universe_domain=googleapis.com
 PORT=9000
 ```
+
+### Run
+
+- go to `ai-api` directory
+- python3 app.py, by default it runs on port 9000
 
 ## Auth0 setup
 
