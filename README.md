@@ -19,7 +19,7 @@ Node.js, TypeScript and Express are used here
 ```
 CHATBOT_API_KEY={whatever you decide; this value is reused among ai-api, web-api and web in this project}
 OPEN_AI_API_KEY={go to platform.openai.com, generate and copy-paste api key here}
-// Google Cloud API
+# Google Cloud API
 GOOGLE_API_KEY=
 type=service_account
 project_id={project id}
@@ -33,13 +33,14 @@ auth_provider_x509_cert_url=https://www.googleapis.com/oauth2/v1/certs
 client_x509_cert_url=https://www.googleapis.com/robot/v1/metadata/x509/{project-name}%40{project-id}.iam.gserviceaccount.com
 universe_domain=googleapis.com
 
-// Stripe
+# Stripe
 STRIPE_SECRET_KEY={sk_...}
 STRIPE_PUBLISHABLE_KEY={pk_...}
 TOKENS_PRICE_ID={price_some characters here - you need to create a price in Stripe for tokens first and then copy-paste it here}
-TOKENS_PER_TRANSACTION=5 // you can change it
+# TOKENS_PER_TRANSACTION defines how many interactions user can make with AI per single bibs purchase
+TOKENS_PER_TRANSACTION=5
 
-// Auth0
+# Auth0
 AUTH0_SECRET=
 AUTH0_BASE_URL={url pointing to where web is deployed}
 AUTH0_ISSUER_BASE_URL='https://{tenant-name}.us.auth0.com'
@@ -75,14 +76,15 @@ Next.js used here with Vercel's [template](https://vercel.com/templates/next.js/
 CHATBOT_API_KEY={whatever you decide; this value is reused among ai-api, web-api and web in this project}
 CHATBOT_API_URL={url to where api is deployed}
 
-NEXT_PUBLIC_AUTH0_ISSUER_BASE_URL="https://{tenant-name}.us.auth0.com"
-NEXT_PUBLIC_AUTH0_CLIENT_ID=
+
 NEXT_PUBLIC_API_URL={url pointing to where api is deployed}
 API_URL={url to where api is deployed}
 SESSION_SECRET="set_secret_value_here"
 NEXT_PUBLIC_SELF_URL={url pointing to where web is deployed}
 
-// Auth0
+# Auth0
+NEXT_PUBLIC_AUTH0_ISSUER_BASE_URL="https://{tenant-name}.us.auth0.com"
+NEXT_PUBLIC_AUTH0_CLIENT_ID=
 AUTH0_SECRET=
 AUTH0_BASE_URL={url pointing to where web is deployed}
 AUTH0_ISSUER_BASE_URL='https://{tenant-name}.us.auth0.com'
@@ -120,7 +122,7 @@ Python and FastAPI here
 ```
 CHATBOT_API_KEY={whatever you decide; this value is reused among ai-api, web-api and web in this project}
 OPEN_AI_API_KEY={go to platform.openai.com, generate and copy-paste api key here}
-// Google Cloud API start
+# Google Cloud API start
 GOOGLE_API_KEY=
 type=service_account
 project_id={project id}
@@ -169,7 +171,7 @@ Create an account, then a new tenant. You will need to set up:
 
 ## Stripe setup
 
-Create an account
+Create an account, turn the test mode unless you want to run it on production and process real payments, go to Developers tab, then API keys. This is where you can find values for STRIPE_SECRET_KEY and STRIPE_PUBLISHABLE_KEY. Now go to Products tab and Add product which represents a single purchase of bibs (one bib - one interaction with AI for a user). Once you create it, copy priceId and put it into .env as TOKENS_PRICE_ID.
 
 ## OpenAI setup
 
