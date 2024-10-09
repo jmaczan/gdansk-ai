@@ -182,13 +182,16 @@ Thanks to [Jeff McJunkin](https://github.com/jeffmcjunkin) for improving the REA
 GNU GPL v2
 
 ## Cite
+If you use this software in your research, please use the following citation:
+
 ```bibtex
 @software{Maczan_Gdansk_AI_2023,
 author = {Maczan, Jędrzej Paweł},
 title = {{Gdańsk AI - Full stack voice chatbot}},
 url = {https://github.com/jmaczan/gdansk-ai},
 year = {2023},
-publisher = {GitHub}}
+publisher = {GitHub}
+}
 ```
 
 ## Author
