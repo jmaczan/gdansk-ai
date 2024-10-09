@@ -187,9 +187,8 @@ GNU GPL v2
 author = {Maczan, Jędrzej Paweł},
 title = {{Gdańsk AI - Full stack voice chatbot}},
 url = {https://github.com/jmaczan/gdansk-ai},
-year = {2023}
-publisher = {GitHub}
-}
+year = {2023},
+publisher = {GitHub}}
 ```
 
 ## Author
