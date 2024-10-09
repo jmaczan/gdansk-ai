@@ -185,10 +185,10 @@ GNU GPL v2
 ```bibtex
 @software{Maczan_Gdansk_AI_2023,
 author = {Maczan, Jędrzej Paweł},
-month = jul,
 title = {{Gdańsk AI - Full stack voice chatbot}},
 url = {https://github.com/jmaczan/gdansk-ai},
 year = {2023}
+publisher = {GitHub}
 }
 ```
 
