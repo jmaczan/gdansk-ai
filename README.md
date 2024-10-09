@@ -181,6 +181,17 @@ Thanks to [Jeff McJunkin](https://github.com/jeffmcjunkin) for improving the REA
 
 GNU GPL v2
 
+## Cite
+```bibtex
+@software{Maczan_Gdansk_AI_2023,
+author = {Maczan, Jędrzej Paweł},
+month = jul,
+title = {{Gdańsk AI - Full stack voice chatbot}},
+url = {https://github.com/jmaczan/gdansk-ai},
+year = {2023}
+}
+```
+
 ## Author
 
 Made in [Gdańsk](https://en.wikipedia.org/wiki/Gda%C5%84sk), [Poland](https://en.wikipedia.org/wiki/Poland) in 2023 by [Jędrzej Paweł Maczan](https://maczan.pl)
